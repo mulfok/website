@@ -7,9 +7,13 @@
 :root {
 	--color-bg: #000000;
 	--color-fg: #ffffff;
+	--color-muted: #5e5e5e;
+
 	--color-accent: #5fcde4; /*#5fff8a;*/
 	--color-accent-hover: #ffffff;
-	--color-muted: #5e5e5e;
+
+	--color-bold: #FF5E5B;
+	--color-italic: #5fff8a;
 	
 	--font-body: "Victor Mono", ui-monospace, monospace;
 }

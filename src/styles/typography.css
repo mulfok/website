@@ -6,10 +6,14 @@ body div.read {
 	margin-right: auto;
 }
 
-/* Typography and Spacing */
-p, ul, ol {
+/* Spacing */
+p,
+ul,
+ol {
 	margin: 1em 0;
 }
+
+li ul { margin: 0; }
 
 /* Links and Clickables */
 a {
@@ -19,6 +23,11 @@ a {
 
 a:hover { color: var(--color-accent-hover); }
 
+/* Bold, Italics */
+
+b { color: var(--color-bold); }
+i { color: var(--color-italic); }
+
 /* Headers */
 h1, h2, h3, h4, h5, h6 {
 	margin: 1rem 0;
@@ -27,6 +36,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1::before {
 	content: "~/";
+	color: var(--color-muted);
+}
+
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+	content: "# ";
 	color: var(--color-muted);
 }
 
