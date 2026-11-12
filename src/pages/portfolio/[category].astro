@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 const { category } = Astro.params;
 const { works } = Astro.props;
 ---
-<Base title="${category}">
+<Base title={`~/portfolio/${category}`}>
 <h1>~/portfolio/{category}</h1>
 <Gallery works={works} />
 </Base>

@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 const { title } = Astro.props;
+import { url } from '../utils/url.js';
 ---
 <html lang="en">
 	<head>
@@ -14,9 +15,11 @@ const { title } = Astro.props;
 	<body>
 		<!-- Navigation Bar -->
 		<nav>
-			<a href="/">~/home</a>
-			<a href="/portfolio">~/portfolio</a>
-			<a href="/commissions">~/commissions</a>
+			<a href={url("")}>~/home</a>
+			<a href={url("portfolio")}>~/portfolio</a>
+			<!-- <a href={url("commissions")}>~/commissions</a> -->
+			<a href={url("projects")}>~/projects</a>
+			<a href={url("blog")}>~/blog</a>
 		</nav>
 
 		<slot />  <!-- page content goes here -->

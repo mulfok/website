@@ -1,0 +1,61 @@
+/* Readable Width Body */
+body div.read {
+	max-width: 600px;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Typography and Spacing */
+p, ul, ol {
+	margin: 0;
+}
+
+/* Links and Clickables */
+a {
+	color: var(--color-accent);
+	text-decoration: none;
+}
+
+a:hover { color: var(--color-accent-hover); }
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	margin: 1rem 0;
+	color: var(--color-accent);
+}
+
+h1::before {
+	content: "# ";
+	color: #5e5e5e;
+}
+
+/* Lists */
+ul:not(.gallery) {
+	list-style-type: none;
+	padding-left: 2ch;
+}
+
+ul:not(.gallery) li::before { content: "- "; }
+
+footer { text-align: center; }
+
+hr { margin: 1rem 0; }
+/*
+hr::after {
+    content: "§";
+    display: inline-block;
+
+    position: absolute;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -55%) rotate(0deg);
+
+    background-color: var(--color-bg);
+    color: var(--color-accent);
+
+    padding: 0.25em 0.5em;
+
+	z-index: 0;
+}
+*/

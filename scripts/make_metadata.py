@@ -22,6 +22,9 @@ if not root.is_dir() or not root.is_relative_to(IMAGES):
 
 print(f"searching {root.relative_to(IMAGES) if root != IMAGES else 'all folders'}")
 
+# prompt the user on the date the images were authored
+input_date = str(input("Authored when? (YYYY-MM-DD): "))
+
 # prompt the user on the kind of images they added
 input_tags = str(input("What tags to use?: "))
 extra_tags = [t.strip().strip("'\"") for t in input_tags.strip("[] ").split(",") if t.strip()]
@@ -41,7 +44,11 @@ for img in sorted(root.rglob("*")):
     tags = list(dict.fromkeys(extra_tags))
 
     image_path = os.path.relpath(img, md_dir).replace(os.sep, "/")
-    date = datetime.fromtimestamp(img.stat().st_mtime).strftime("%Y-%m-%d")
+
+    if input_date:
+        date = input_date
+    else:
+        date = datetime.fromtimestamp(img.stat().st_mtime).strftime("%Y-%m-%d")
 
     md_dir.mkdir(parents=True, exist_ok=True)
     md.write_text(

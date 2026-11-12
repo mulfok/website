@@ -1,15 +1,16 @@
 ---
 import Base from "../layouts/Base.astro";
+import { url } from '../utils/url.js';
 ---
 <Base title="mulfok">
-	<img src="/images/banner.png" class="banner"/>
+	<img src={url("images/banner.png")} class="banner"/>
 
 	<div class=read>
 	
 	<h1>mulfok</h1>
 	<p><i>art, modelling, programming</i><br><br></p>
 	
-	<img src="/images/profile.png" class="aside-left"/>
+	<img src={url("images/profile.png")} class="aside-left"/>
 
 	<p>
 	<span style="color:#48ACF0">█ Type      </span>Artist<br>

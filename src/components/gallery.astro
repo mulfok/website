@@ -25,8 +25,8 @@ const works = [...unsorted].sort(
 </ul>
 
 {works.map(({ id, data }) => (
-  <a class="lightbox" id={id} href="#">
-    <img src={data.image.src} alt={data.title} />
+<a class="lightbox" id={id} href="#close"> <!-- don't scroll back up -->
+	<img src={data.image.src} alt={data.title} />
 	<span>{data.title} | {data.tags.join(', ')}</span>
-  </a>
+</a>
 ))}
