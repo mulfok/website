@@ -8,7 +8,7 @@ body div.read {
 
 /* Typography and Spacing */
 p, ul, ol {
-	margin: 0;
+	margin: 1em 0;
 }
 
 /* Links and Clickables */

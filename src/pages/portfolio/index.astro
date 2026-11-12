@@ -18,9 +18,7 @@ const works = await getCollection('portfolio');
 	I've made art for all sorts of things!<br>
 	You can filter through certain categories below.
 	<br><br>
-	<a href={url("portfolio/all")}>~/portfolio</a>
-	</p>
-	
+	<a href={url("portfolio/all")}>~/portfolio</a> <span style="color: var(--color-muted);"><-- all tags</span>
 	<ul>
 		<li><a href={url("portfolio/pixel")}>/pixel</a></li>
 		<li><a href={url("portfolio/digital")}>/digital</a></li>
@@ -28,9 +26,6 @@ const works = await getCollection('portfolio');
 		<li><a href={url("portfolio/animated")}>/animated</a></li>
 		<li><a href={url("portfolio/renaine")}>/renaine</a></li>
 	</ul>
-
-	<p>
-	<br>
 	If you're looking to <i>commission me,</i> send me a DM on
 	Discord (@mulfok). I'm currently organising a proper
 	platform for my commission stuff, but until then I'll
