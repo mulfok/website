@@ -9,6 +9,7 @@
 	--color-fg: #ffffff;
 	--color-accent: #5fcde4; /*#5fff8a;*/
 	--color-accent-hover: #ffffff;
+	--color-muted: #5e5e5e;
 	
 	--font-body: "Victor Mono", ui-monospace, monospace;
 }
@@ -22,6 +23,10 @@ body {
 nav {
 	text-align: center;
 	margin-bottom: 0.5em;
+}
+nav a::before {
+	content: "~/";
+	color: var(--color-muted);
 }
 nav a:not(:last-child)::after {
 	content: " | "; color: var(--color-fg);
