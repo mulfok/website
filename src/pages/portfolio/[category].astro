@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import Gallery from '/src/components/gallery.astro';
+import Base from '/src/layouts/Base.astro';
+
+export async function getStaticPaths() {
+	const all = await getCollection('portfolio');
+	const tags = [...new Set(all.flatMap((w) => w.data.tags))];
+	// const categories = ['pixel', 'digital', '3d'];
+
+	return tags.map((tag) => ({
+		params: { category: tag },
+		props: { works: all.filter((w) => w.data.tags.includes(tag)) },
+	}));
+}
+
+const { category } = Astro.params;
+const { works } = Astro.props;
+---
+<Base title="${category}">
+<h1>~/portfolio/{category}</h1>
+<Gallery works={works} />
+</Base>

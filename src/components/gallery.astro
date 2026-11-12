@@ -1,0 +1,32 @@
+---
+const { works:unsorted } = Astro.props;
+
+const works = [...unsorted].sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<ul class="gallery">
+  {works.map(({ id, data }) => (
+    <li>
+      <a href={`#${id}`}>
+        <img
+          src={data.image.src}
+          width={data.image.width}
+          height={data.image.height}
+          alt={data.title}
+          loading="lazy"
+          decoding="async"
+        />
+        <span>{data.title}</span>
+      </a>
+    </li>
+  ))}
+</ul>
+
+{works.map(({ id, data }) => (
+  <a class="lightbox" id={id} href="#">
+    <img src={data.image.src} alt={data.title} />
+	<span>{data.title} | {data.tags.join(', ')}</span>
+  </a>
+))}

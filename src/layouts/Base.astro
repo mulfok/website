@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+const { title } = Astro.props;
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+	<title>{title}</title>
+	</head>
+
+	<!-- <img src="public/images/banner.png" class="bg"/> -->
+
+	<body>
+		<!-- Navigation Bar -->
+		<nav>
+			<a href="/">~/home</a>
+			<a href="/portfolio">~/portfolio</a>
+			<a href="/commissions">~/commissions</a>
+		</nav>
+
+		<slot />  <!-- page content goes here -->
+
+		<footer>
+			<hr>
+			© mulfok | with love <3
+		</footer>
+	</body>
+</html>
