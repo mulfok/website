@@ -24,7 +24,7 @@ img.aside-left, img.aside-right {
 }
 
 img.banner {
-	max-height: 250px;
+	max-height: 25vh;
 	width: 110%;
 
 	margin-left: -10px;

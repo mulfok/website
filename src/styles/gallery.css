@@ -10,8 +10,9 @@
 .gallery a {
   display: block;
   border: 1px solid var(--color-accent);
-  text-decoration: none;
 }
+
+.gallery a:hover { border-color: var(--color-accent-hover); }
 
 .gallery img {
   display: block;
@@ -27,11 +28,8 @@
   padding: 0.25rem 0.5rem;
   border-top: 1px solid var(--color-accent);
 
-  color: var(--color-fg);
   font-family: var(--font-body);
 }
-
-.gallery a:hover { border-color: var(--color-accent-hover); }
 
 /* click-to-enlarge, no JS */
 .lightbox {
